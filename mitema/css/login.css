@@ -1,11 +1,14 @@
 /* Estilos para la página de inicio de sesión */
 .login-container {
   max-width: 400px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
+  background-image: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.15) 100%);
 }
 
 .login-form {
@@ -20,6 +23,12 @@
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+.login-input:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
 
 .login-button {
@@ -29,18 +38,19 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
 }
 
 .login-button:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
 }
 
-/* Estilo para el logo en la página de login */
-.login-logo {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 2rem;
-  display: block;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+/* Estilos para el título de login */
+.login-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
